@@ -1,0 +1,8 @@
+{
+  "name": "nmd",
+  "public": false,
+  "dependencies": {
+    "jade": "^1.11.0",
+    "underscore": "^1.8.3"
+  }
+}

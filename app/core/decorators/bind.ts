@@ -1,4 +1,4 @@
-export function bind(target: any, key: string){
+module.exports = function(target: any, key: string){
   // target.template_vars.push(key);
   var _val = this[key];
 
@@ -10,12 +10,12 @@ export function bind(target: any, key: string){
 
   // property setter
   var setter = function (newVal) {
-    this.template_vars = [key];
-    
+    _val = newVal;
+    if(this.template_vars.indexOf(key) === -1){
+        this.template_vars.push(key);
+    }
+
     this.render();
-    console.log(this);
-    console.log(key);
-    console.log(target);
   };
 
   // Delete property.

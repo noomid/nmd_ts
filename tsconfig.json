@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ES5",
-    "module": "system",
+    "target": "ES6",
+    "module": "amd",
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
@@ -11,5 +11,20 @@
   },
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "filesGlob": [
+    "./app/**/*.ts"
+  ],
+  "files": [
+    "./app/boot.ts",
+    "./app/config.ts",
+    "./app/core/Component.ts",
+    "./app/core/Core.ts",
+    "./app/core/decorators/bind.ts",
+    "./app/node.d.ts",
+    "./app/utils/Dom.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
 }

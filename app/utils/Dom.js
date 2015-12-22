@@ -1,19 +1,10 @@
-System.register([], function(exports_1) {
+define(["require", "exports"], function (require, exports) {
     'use strict';
-    var Dom;
-    return {
-        setters:[],
-        execute: function() {
-            Dom = (function () {
-                function Dom() {
-                }
-                Dom.el = function (selector) {
-                    return document.querySelector(selector);
-                };
-                return Dom;
-            })();
-            exports_1("Dom", Dom);
+    class Dom {
+        static el(selector) {
+            return document.querySelector(selector);
         }
     }
+    exports.Dom = Dom;
 });
 //# sourceMappingURL=Dom.js.map
